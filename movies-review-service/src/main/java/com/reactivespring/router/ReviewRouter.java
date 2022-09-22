@@ -15,7 +15,8 @@ public class ReviewRouter {
                     builder.GET("", request -> reviewHandler.getReview(request))
                             .POST("", request -> reviewHandler.addReview(request))
                             .PUT("/{id}", request -> reviewHandler.updateReview(request))
-                            .DELETE("/{id}", request -> reviewHandler.deleteReview(request));
+                            .DELETE("/{id}", request -> reviewHandler.deleteReview(request))
+                            .GET("/stream", request -> reviewHandler.getReviewStream());
 
                 })
                 .GET("/v1/helloworld", request -> ServerResponse.ok().bodyValue("helloworld"))

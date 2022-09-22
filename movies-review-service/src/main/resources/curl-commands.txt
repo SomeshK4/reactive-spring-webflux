@@ -38,3 +38,8 @@ curl -i \
 DELETE-MOVIE-INFO
 -----------------------
 curl -i -X DELETE http://localhost:8081/v1/reviews/1
+
+
+GET-REVIEW-STREAM
+---------------------------------
+curl -i http://localhost:8081/v1/reviews/stream
